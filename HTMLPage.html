@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Title of the document</title>
+    <style>
+        .parent {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        .image1 {
+            position: relative;
+            top: 0;
+            left: 0;
+            border: 1px solid #000000;
+        }
+
+        .image2 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+
+        <img id="myImage" class="image2" src="wall_png 2.png" />
+        <img class="image1" src="MainImage.png" />
+
+    </div>
+    <button type="button" onclick="first()" id="btnID">
+        First Image
+    </button>
+    <button type="button" onclick="second()" id="btnID">
+        Second Image
+    </button>
+
+    <script>
+        function first() {
+            document.getElementById('myImage').src = "wall_png 1.png";
+        }
+        function second() {
+            document.getElementById('myImage').src = "wall_png 2.png";
+        }
+    </script>
+</body>
+</html>
